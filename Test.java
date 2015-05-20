@@ -4,7 +4,31 @@ class Test {
 
 	public static void main(String args[]) {
 
+// 配列ソート
+		SortableStringVector vect = new SortableStringVector();
+		String str;
 
+		int i = 0;
+		while(true) {
+			str = readLine();
+			if (str.length() == 0) {
+				break;
+			}
+
+			vect.at(i,str);
+			i++;
+		}
+
+		vect.sort();
+
+		int n = vect.getLength();
+		for(i = 0; i < n; i++) {
+			str = vect.at(i);
+			if (str == null) break;
+			System.out.print(str);
+		}
+
+/*
 // 標準入力から１行ずつ読み込み、逆順にして表示 Ctrl+ZorCで終了
 		StringStack stack = new StringStack(10);
 		String str;
@@ -24,6 +48,7 @@ class Test {
 			System.out.print("pop :"+ stack.pop());
 			System.out.print("peek:"+ stack.peek());
 		}
+*/
 	}
 
 

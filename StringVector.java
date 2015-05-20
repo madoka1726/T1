@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class StringVector{
 	protected int m_size; // 配列サイズ
 	protected String m_vector[]; // 配列
@@ -25,6 +26,7 @@ public class StringVector{
 		}
 
 		m_vector[n] = value;
+//System.out.println(Arrays.toString(m_vector));
 	}
 
 	// 取得
